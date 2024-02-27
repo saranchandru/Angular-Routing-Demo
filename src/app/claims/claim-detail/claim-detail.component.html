@@ -1,0 +1,27 @@
+<form [formGroup]="claimForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="claimId">Claim ID</label>
+    <input type="text" class="form-control" id="claimId" formControlName="claimId" readonly>
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" required>
+  </div>
+  <div class="form-group">
+    <label for="claimDate">Claim Date</label>
+    <input type="date" class="form-control" id="claimDate" formControlName="claimDate" required>
+  </div>
+  <div class="form-group">
+    <label for="claimType">Claim Type</label>
+    <input type="text" class="form-control" id="claimType" formControlName="claimType" required>
+  </div>
+  <div class="form-group">
+    <label for="status">Status</label>
+    <input type="text" class="form-control" id="status" formControlName="status" required>
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="number" class="form-control" id="amount" formControlName="amount" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

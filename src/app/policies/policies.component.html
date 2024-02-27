@@ -1,0 +1,24 @@
+<table class="policy-table">
+  <thead>
+    <tr>
+      <th>Policy ID</th>
+      <th>Policyholder Name</th>
+      <th>Policy Type</th>
+      <th>Coverage Amount</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (policy of policies; track policy.policyId) {
+    <tr>
+      <td>{{ policy.policyId }}</td>
+      <td>{{ policy.policyholderName }}</td>
+      <td>{{ policy.policyType }}</td>
+      <td>{{ policy.coverageAmount | currency }}</td>
+      <td>{{ policy.startDate | date:'mediumDate' }}</td>
+      <td>{{ policy.endDate | date:'mediumDate' }}</td>
+    </tr>
+    }
+  </tbody>
+</table>

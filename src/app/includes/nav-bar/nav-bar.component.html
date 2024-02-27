@@ -1,0 +1,13 @@
+<div class="legend">
+  <ul>
+    <li>[*] All users</li>
+    <li>[£] Manager & User</li>
+    <li>[$] Admin & Manager</li>
+    <li>[#] Admin only</li>
+  </ul>
+</div>
+<a routerLinkActive="active" routerLink="/claims">Claims *</a>
+<a routerLinkActive="active" routerLink="/support">Support £</a>
+<a routerLinkActive="active" routerLink="/policies">Policies $</a>
+<a routerLinkActive="active" routerLink="/feedback">Feedback #</a>
+<a (click)="onLogout()">Logout *</a>

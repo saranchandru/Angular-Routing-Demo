@@ -1,0 +1,24 @@
+Example Users:<br />
+<ol>
+  <li>admin/admin</li>
+  <li>manager/manager</li>
+  <li>user/user</li>
+</ol>
+
+@for (errorInfo of loginError|async; track errorInfo.errorCode) {
+<div class="error">
+  {{ errorInfo.errorMessage }}
+</div>
+}
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" formControlName="username" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" formControlName="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>

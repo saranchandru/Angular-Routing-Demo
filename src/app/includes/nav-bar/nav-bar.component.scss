@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  padding: 16px 0px;
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #333;
+  background-color: #ececec;
+  margin-right: 16px;
+  border: 1px solid #ccc;
+
+  &.active {
+    background-color: #14539a;
+    border-color: #184375;
+    color: #fff;
+  }
+}
+
+.legend {
+  padding-bottom: 16px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-right: 24px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+
+  .error {
+    color: red;
+  }
+
+  .form-group {
+    margin: 8px 0;
+    display: flex;
+  }
+
+  label {
+    width: 100px;
+  }
+
+  input,
+  textarea {
+    flex: auto;
+  }
+}
