@@ -10,7 +10,7 @@ import { UserRole } from '../utilities/user/user-role.enum';
     ReactiveFormsModule
   ],
   templateUrl: './support.component.html',
-  styleUrl: './support.component.scss'
+  styleUrls: ['./support.component.scss']
 })
 export class SupportComponent {
   supportForm: FormGroup = new FormGroup([]);

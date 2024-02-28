@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,11 +10,12 @@ import { LoginService } from './login.service';
   selector: 'app-login',
   standalone: true,
   imports: [
-    CommonModule,
+    NgFor,
+    AsyncPipe,
     ReactiveFormsModule
   ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup = new FormGroup([]);

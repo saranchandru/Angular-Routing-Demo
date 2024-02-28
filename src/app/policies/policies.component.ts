@@ -1,13 +1,13 @@
-import { CurrencyPipe, DatePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { InsurancePolicy } from './policies.model';
 
 @Component({
   selector: 'app-policies',
   standalone: true,
-  imports: [CurrencyPipe, DatePipe],
+  imports: [CurrencyPipe, DatePipe, NgFor],
   templateUrl: './policies.component.html',
-  styleUrl: './policies.component.scss'
+  styleUrls: ['./policies.component.scss']
 })
 export class PoliciesComponent implements OnInit {
   policies: InsurancePolicy[] = [];

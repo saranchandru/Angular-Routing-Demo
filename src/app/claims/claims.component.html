@@ -5,30 +5,24 @@
       <th>Policyholder Name</th>
       <th>Date of Claim</th>
       <th>Claim Type</th>
-      @if (userRole === adminRole) {
-      <th>Status</th>
-      }
+      <th *ngIf="userRole === adminRole">Status</th>
       <th>Amount Claimed</th>
-      @if ([managerRole, adminRole].includes(userRole)) {
-      <th>Action</th>
-      }
+      <th *ngIf="[managerRole, adminRole].includes(userRole)">Action</th>
     </tr>
   </thead>
   <tbody>
-    @for (claim of claims; track claim.claimId) {
-    <tr>
-      <td>{{ claim.claimId }}</td>
-      <td>{{ claim.name }}</td>
-      <td>{{ claim.claimDate | date:'mediumDate' }}</td>
-      <td>{{ claim.claimType }}</td>
-      @if (userRole === adminRole) {
-      <td>{{ claim.status }}</td>
-      }
-      <td align="right">{{ claim.amount | currency }}</td>
-      @if ([managerRole, adminRole].includes(userRole)) {
-      <td><a href="javascript:void(0)" (click)="onClaimView(claim)">View</a></td>
-      }
-    </tr>
-    }
+    <ng-container *ngFor="let claim of claims">
+      <tr>
+        <td>{{ claim.claimId }}</td>
+        <td>{{ claim.name }}</td>
+        <td>{{ claim.claimDate | date:'mediumDate' }}</td>
+        <td>{{ claim.claimType }}</td>
+        <td *ngIf="userRole === adminRole">{{ claim.status }}</td>
+        <td align="right">{{ claim.amount | currency }}</td>
+        <td *ngIf="[managerRole, adminRole].includes(userRole)">
+          <a href="javascript:void(0)" (click)="onClaimView(claim)">View</a>
+        </td>
+      </tr>
+    </ng-container>
   </tbody>
 </table>

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './restriction.component.html',
-  styleUrl: './restriction.component.scss'
+  styleUrls: ['./restriction.component.scss']
 })
 export class RestrictionComponent {
 

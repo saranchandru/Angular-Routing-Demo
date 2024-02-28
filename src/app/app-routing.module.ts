@@ -1,9 +1,10 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { appRoutesGuard } from './app.routes.guard';
 import { MessageConstant } from './utilities/message-constants';
 import { UserRole } from './utilities/user/user-role.enum';
 
-export const routes: Routes = [
+const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'claims' },
   {
     // Enabled for all logged in users.
@@ -64,3 +65,9 @@ export const routes: Routes = [
     title: `${MessageConstant.pageTitle} - Page Not Found`,
   }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

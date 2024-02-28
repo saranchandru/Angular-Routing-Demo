@@ -5,11 +5,11 @@ Example Users:<br />
   <li>user/user</li>
 </ol>
 
-@for (errorInfo of loginError|async; track errorInfo.errorCode) {
-<div class="error">
-  {{ errorInfo.errorMessage }}
-</div>
-}
+<ng-container *ngFor="let errorInfo of loginError|async">
+  <div class="error">
+    {{ errorInfo.errorMessage }}
+  </div>
+</ng-container>
 
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <div class="form-group">

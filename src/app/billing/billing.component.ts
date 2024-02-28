@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './billing.component.html',
-  styleUrl: './billing.component.scss'
+  styleUrls: ['./billing.component.scss']
 })
 export class BillingComponent {
 

@@ -10,7 +10,7 @@ import { LoginService } from '../../login/login.service';
     RouterLinkActive
   ],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
   constructor(

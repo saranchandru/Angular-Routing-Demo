@@ -1,4 +1,4 @@
-import { CurrencyPipe, DatePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { LoginService } from '../login/login.service';
@@ -9,9 +9,9 @@ import { InsuranceClaims } from './claims.model';
 @Component({
   selector: 'app-claims',
   standalone: true,
-  imports: [CurrencyPipe, DatePipe, RouterLink],
+  imports: [CurrencyPipe, DatePipe, RouterLink, NgIf, NgFor],
   templateUrl: './claims.component.html',
-  styleUrl: './claims.component.scss'
+  styleUrls: ['./claims.component.scss']
 })
 export class ClaimsComponent implements OnInit {
   userRole: string = '';

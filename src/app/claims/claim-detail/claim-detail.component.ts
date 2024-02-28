@@ -14,7 +14,7 @@ import { ClaimDetailService } from './claim-detail.service';
     ReactiveFormsModule
   ],
   templateUrl: './claim-detail.component.html',
-  styleUrl: './claim-detail.component.scss'
+  styleUrls: ['./claim-detail.component.scss']
 })
 export class ClaimDetailComponent implements OnInit {
   public claimInfo!: InsuranceClaims;

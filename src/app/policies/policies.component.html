@@ -10,15 +10,15 @@
     </tr>
   </thead>
   <tbody>
-    @for (policy of policies; track policy.policyId) {
-    <tr>
-      <td>{{ policy.policyId }}</td>
-      <td>{{ policy.policyholderName }}</td>
-      <td>{{ policy.policyType }}</td>
-      <td>{{ policy.coverageAmount | currency }}</td>
-      <td>{{ policy.startDate | date:'mediumDate' }}</td>
-      <td>{{ policy.endDate | date:'mediumDate' }}</td>
-    </tr>
-    }
+    <ng-container *ngFor="let policy of policies">
+      <tr>
+        <td>{{ policy.policyId }}</td>
+        <td>{{ policy.policyholderName }}</td>
+        <td>{{ policy.policyType }}</td>
+        <td>{{ policy.coverageAmount | currency }}</td>
+        <td>{{ policy.startDate | date:'mediumDate' }}</td>
+        <td>{{ policy.endDate | date:'mediumDate' }}</td>
+      </tr>
+    </ng-container>
   </tbody>
 </table>
